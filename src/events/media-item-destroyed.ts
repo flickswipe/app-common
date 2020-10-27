@@ -4,5 +4,7 @@ export interface MediaItemDestroyedEvent {
   subject: Subjects.MediaItemDestroyed;
   data: {
     id: string;
+    tmdbMovieId: number;
+    imdbId: string;
   };
 }

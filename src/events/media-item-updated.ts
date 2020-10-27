@@ -3,6 +3,9 @@ import { Subjects } from "./subjects";
 export interface MediaItemUpdatedEvent {
   subject: Subjects.MediaItemUpdated;
   data: {
+    id: string;
+    tmdbMovieId: number;
+    imdbId: string;
     title: string;
     images: { poster: string; backdrop: string };
     rating: {
