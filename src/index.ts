@@ -1,4 +1,5 @@
 // Re-export stuff from errors and middlewares
+export * from "./iso6391";
 export * from "./catch/mongodb";
 
 export * from "./errors/bad-request-error";
@@ -19,17 +20,12 @@ export * from "./events/base-publisher";
 export * from "./events/email-token-created";
 export * from "./events/genre-detected";
 export * from "./events/media-item-destroyed";
-export * from "./events/media-item-judged";
-export * from "./events/media-item-rated";
 export * from "./events/media-item-updated";
 export * from "./events/notification-created";
 export * from "./events/notification-updated";
-export * from "./events/relationship-created";
-export * from "./events/relationship-destroyed";
 export * from "./events/relationship-updated";
 export * from "./events/subjects";
 export * from "./events/user-created";
-export * from "./events/user-media-item-rating-predicted";
 export * from "./events/user-updated-email";
 export * from "./events/user-updated-setting";
 

@@ -1,10 +1,13 @@
 export enum RelationshipType {
-  // User has requested relationship, but target has not accepted
-  Pending = "pending",
+  Active = "active",
+  Blocked = "blocked"
+}
 
-  // User has requested relationship, and target has accepted
+export enum RelationshipUpdateType {
+  Requested = "requested",
   Accepted = "accepted",
-
-  // User has blocked target
+  Cancelled = "cancelled",
+  Rejected = "rejected",
   Blocked = "blocked",
+  Unblocked = "unblocked"
 }

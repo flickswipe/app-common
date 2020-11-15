@@ -1,13 +1,12 @@
 import { Subjects } from "./subjects";
-import { RelationshipType } from "./types/relationship";
+import { RelationshipUpdateType } from "./types/relationship";
 
 export interface RelationshipUpdatedEvent {
-  subject: Subjects.RelationshipUpdated;
-  data: {
-    id: string;
-    relationshipType: RelationshipType;
-    sourceUserId: string;
-    targetUserId: string;
-    updatedAt: Date;
-  };
+    subject: Subjects.RelationshipUpdated;
+    data: {
+        relationshipUpdateType: RelationshipUpdateType;
+        sourceUserId: string;
+        targetUserId: string;
+        updatedAt: Date;
+    };
 }

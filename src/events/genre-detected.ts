@@ -1,3 +1,4 @@
+import { iso6391 } from "../iso6391";
 import { Subjects } from "./subjects";
 
 export interface GenreDetectedEvent {
@@ -5,7 +6,7 @@ export interface GenreDetectedEvent {
   data: {
     id: string;
     name: string;
-    language: string;
+    language: iso6391;
     detectedAt: Date;
   };
 }

@@ -6,6 +6,6 @@ export interface NotificationCreatedEvent {
     id: string;
     user: string;
     mesage: string;
-    createdOn: Date;
+    createdAt: Date;
   };
 }

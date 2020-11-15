@@ -1,9 +1,10 @@
 import { Subjects } from "./subjects";
 
 export interface NotificationUpdatedEvent {
-  subject: Subjects.NotificationUpdated;
-  data: {
-    id: string;
-    read: true;
-  };
+    subject: Subjects.NotificationUpdated;
+    data: {
+        id: string;
+        read: true;
+        updatedAt: Date;
+    };
 }

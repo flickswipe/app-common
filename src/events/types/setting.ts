@@ -1,10 +1,9 @@
 export enum SettingType {
-  // Set genres the user prefers
-  Genre = "genre",
-
-  // Set IMDB ratings that the user prefers
-  ImdbRating = "imdb:rating",
-
-  // Set years of release the that user prefers
-  Year = "year",
+  Country = "country",
+  Genres = "genres",
+  Languages = "languages",
+  StreamLocations = "stream-locations",
+  Rating = "rating",
+  ReleaseDate = "release-date",
+  Runtime = "runtime"
 }

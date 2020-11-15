@@ -1,10 +1,9 @@
 import { Subjects } from "./subjects";
 
 export interface MediaItemDestroyedEvent {
-  subject: Subjects.MediaItemDestroyed;
-  data: {
-    id: string;
-    tmdbMovieId: number;
-    imdbId: string;
-  };
+    subject: Subjects.MediaItemDestroyed;
+    data: {
+        id: string;
+        updatedAt: Date;
+    };
 }
