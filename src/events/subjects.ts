@@ -13,10 +13,13 @@ export enum Subjects {
   NotificationCreated = "notification:created",
   NotificationUpdated = "notification:updated",
 
+  // survey
+  MediaItemRated = "media-item:rated",
+
   // predict
   MediaItemSuggested = "media-item:suggested",
 
   // user
   UserUpdatedSetting = "user:updated:setting",
-  RelationshipUpdated = "relationship:updated"
+  RelationshipUpdated = "relationship:updated",
 }
