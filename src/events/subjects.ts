@@ -13,6 +13,9 @@ export enum Subjects {
   NotificationCreated = "notification:created",
   NotificationUpdated = "notification:updated",
 
+  // predict
+  MediaItemSuggested = "media-item:suggested",
+
   // user
   UserUpdatedSetting = "user:updated:setting",
   RelationshipUpdated = "relationship:updated"
