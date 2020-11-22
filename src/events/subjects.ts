@@ -17,7 +17,7 @@ export enum Subjects {
   MediaItemRated = "media-item:rated",
 
   // predict
-  MediaItemSuggested = "media-item:suggested",
+  MediaItemsSuggested = "media-items:suggested",
 
   // user
   UserUpdatedSetting = "user:updated:setting",

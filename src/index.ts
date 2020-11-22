@@ -21,7 +21,7 @@ export * from "./events/email-token-created";
 export * from "./events/genre-detected";
 export * from "./events/media-item-destroyed";
 export * from "./events/media-item-rated";
-export * from "./events/media-item-suggested";
+export * from "./events/media-items-suggested";
 export * from "./events/media-item-updated";
 export * from "./events/notification-created";
 export * from "./events/notification-updated";
