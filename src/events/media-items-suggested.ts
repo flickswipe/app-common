@@ -5,5 +5,6 @@ export interface MediaItemsSuggestedEvent {
   data: {
     user: string;
     mediaItems: string[];
+    clearExistingSuggestions?: boolean;
   };
 }
