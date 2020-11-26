@@ -13,7 +13,9 @@ export * from "./errors/too-many-requests-error";
 export * from "./middlewares/current-user";
 export * from "./middlewares/error-handler";
 export * from "./middlewares/require-auth";
+export * from "./middlewares/validate-iso6391-param";
 export * from "./middlewares/validate-request";
+export * from "./middlewares/validate-object-id-param";
 
 export * from "./events/base-listener";
 export * from "./events/base-publisher";
