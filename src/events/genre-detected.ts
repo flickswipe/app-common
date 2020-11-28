@@ -4,7 +4,7 @@ import { Subjects } from "./subjects";
 export interface GenreDetectedEvent {
   subject: Subjects.GenreDetected;
   data: {
-    genreId: string;
+    tmdbGenreId: string;
     name: string;
     language: iso6391;
     detectedAt: Date;
