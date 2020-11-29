@@ -1,4 +1,3 @@
-import { iso6391 } from "../iso6391";
 import { Subjects } from "./subjects";
 import { SettingType } from "./types/setting";
 export interface MinMax<T> {
@@ -22,7 +21,7 @@ export interface GenresSetting {
 export interface AudioLanguagesSetting {
   settingType: SettingType.AudioLanguages;
   user: string;
-  value: Record<iso6391, boolean>;
+  value: Record<string, boolean>;
   updatedAt: Date;
 }
 export interface StreamLocationsSetting {

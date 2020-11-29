@@ -1,5 +1,4 @@
 import { Subjects } from "./subjects";
-import { iso6391 } from "../iso6391";
 
 export interface MediaItemUpdatedEvent {
   subject: Subjects.MediaItemUpdated;
@@ -18,7 +17,7 @@ export interface MediaItemUpdatedEvent {
       count: number;
       popularity: number;
     };
-    audioLanguage: iso6391;
+    audioLanguage: string;
     releaseDate: Date;
     runtime: number;
     plot: string;
