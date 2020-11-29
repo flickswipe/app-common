@@ -1,12 +1,11 @@
-import { iso6391 } from "../iso6391";
 import { Subjects } from "./subjects";
 
 export interface GenreUpdatedEvent {
   subject: Subjects.GenreUpdated;
   data: {
+    id: string;
     tmdbGenreId: number;
     name: string;
-    language: iso6391;
-    detectedAt: Date;
+    updatedAt: Date;
   };
 }
