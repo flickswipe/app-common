@@ -8,7 +8,7 @@ export interface MediaItemUpdatedEvent {
     tmdbMovieId: number;
     imdbId: string;
     title: string;
-    genres: number[];
+    genres: string[];
     images: {
       poster: string;
       backdrop: string;

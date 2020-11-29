@@ -15,7 +15,7 @@ export interface GenresSetting {
   settingType: SettingType.Genres;
   user: string;
   value: {
-    [genre: number]: boolean;
+    [genre: string]: boolean;
   };
   updatedAt: Date;
 }
