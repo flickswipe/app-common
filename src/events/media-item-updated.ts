@@ -18,7 +18,7 @@ export interface MediaItemUpdatedEvent {
       count: number;
       popularity: number;
     };
-    language: iso6391;
+    audioLanguage: iso6391;
     releaseDate: Date;
     runtime: number;
     plot: string;

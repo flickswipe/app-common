@@ -19,8 +19,8 @@ export interface GenresSetting {
   };
   updatedAt: Date;
 }
-export interface LanguagesSetting {
-  settingType: SettingType.Languages;
+export interface AudioLanguagesSetting {
+  settingType: SettingType.AudioLanguages;
   user: string;
   value: Record<iso6391, boolean>;
   updatedAt: Date;
@@ -54,7 +54,7 @@ export interface RuntimeSetting {
 export declare type AnySetting =
   | CountrySetting
   | GenresSetting
-  | LanguagesSetting
+  | AudioLanguagesSetting
   | StreamLocationsSetting
   | RatingSetting
   | ReleaseDateSetting
