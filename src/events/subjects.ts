@@ -7,7 +7,7 @@ export enum Subjects {
   // ingest
   MediaItemUpdated = "media-item:updated",
   MediaItemDestroyed = "media-item:destroyed",
-  GenreDetected = "genre:detected",
+  GenreUpdated = "genre:updated",
 
   // notify
   NotificationCreated = "notification:created",

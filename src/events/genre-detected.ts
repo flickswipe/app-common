@@ -1,8 +1,8 @@
 import { iso6391 } from "../iso6391";
 import { Subjects } from "./subjects";
 
-export interface GenreDetectedEvent {
-  subject: Subjects.GenreDetected;
+export interface GenreUpdatedEvent {
+  subject: Subjects.GenreUpdated;
   data: {
     tmdbGenreId: number;
     name: string;
