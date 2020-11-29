@@ -1,5 +1,4 @@
 // Re-export stuff from errors and middlewares
-export * from "./iso6391";
 export * from "./catch/mongodb";
 
 export * from "./errors/bad-request-error";
