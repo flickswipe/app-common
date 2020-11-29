@@ -20,7 +20,7 @@ export * from "./middlewares/validate-object-id-param";
 export * from "./events/base-listener";
 export * from "./events/base-publisher";
 export * from "./events/email-token-created";
-export * from "./events/genre-detected";
+export * from "./events/genre-updated";
 export * from "./events/media-item-destroyed";
 export * from "./events/media-item-rated";
 export * from "./events/media-items-suggested";
