@@ -42,4 +42,5 @@ export * from "./events/types/setting";
 
 export * from "./startup/attach-exit-tasks";
 export * from "./startup/connect-to-database-server";
+export * from "./startup/connect-to-mail-server";
 export * from "./startup/connect-to-messaging-server";
