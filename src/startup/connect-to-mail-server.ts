@@ -29,5 +29,7 @@ export async function connectToMailServer(
   );
 
   // return exit tasks
-  return () => transporterWrapper.transporter.close();
+  return () => {
+    // do nothing
+  };
 }
