@@ -30,6 +30,7 @@ export async function connectToMailServer(
 
   // return exit tasks
   return () => {
-    // do nothing
+    console.info("Closing connecting to mail server");
+    transporterWrapper.transporter.close();
   };
 }

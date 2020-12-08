@@ -16,12 +16,17 @@ export async function connectToMessagingServer(
   // handle disconnect
   natsWrapper.client.on("disconnect", () => {
     console.error(`NATS connection lost`);
-    process.exit();
+
+    console.info("Exiting process...");
+    process.exitCode = 1;
   });
 
   // attach listeners
   Listeners.forEach((Listener) => new Listener(natsWrapper.client).listen());
 
   // return exit tasks
-  return () => natsWrapper.client.close();
+  return () => {
+    console.info("Closing connecting to messaging server");
+    natsWrapper.client.close();
+  };
 }
