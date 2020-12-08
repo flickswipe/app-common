@@ -26,5 +26,7 @@ export async function connectToDatabaseServer(
   });
 
   // return exit tasks
-  return () => mongoose.connection.close();
+  return () => {
+    // do nothing
+  };
 }
