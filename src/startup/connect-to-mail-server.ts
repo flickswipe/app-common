@@ -6,7 +6,7 @@ interface TransporterWrapper {
     user: string,
     pass: string,
     opts: Record<string, unknown>
-  ): Promise<any>;
+  ): Promise<unknown>;
 }
 
 export async function connectToMailServer(

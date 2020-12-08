@@ -1,6 +1,6 @@
 interface NatsWrapper {
   client: any;
-  connect(clusterId: string, clientId: string, url: string): Promise<void>;
+  connect(clusterId: string, clientId: string, url: string): Promise<unknown>;
 }
 
 export async function connectToMessagingServer(

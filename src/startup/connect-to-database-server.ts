@@ -6,7 +6,7 @@ export async function connectToDatabaseServer(
   user: string,
   pass: string,
   dbName: string
-): Promise<() => void> {
+): Promise<() => unknown> {
   // handle connection events
   mongoose.connection.on("connected", () => {
     console.info(`Connected to MongoDb`);
