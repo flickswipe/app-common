@@ -25,7 +25,9 @@ export async function connectToMessagingServer(
 
   // attach listeners
   Listeners.forEach((Listener) => {
-    console.info(`Listening to ${Listener.name}`);
+    console.info(
+      `Listening to ${Listener.name.replace(/Listener$/, " events")}`
+    );
     new Listener(natsWrapper.client).listen();
   });
 

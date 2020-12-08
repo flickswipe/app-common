@@ -25,6 +25,7 @@ export async function connectToDatabaseServer(
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
+    useFindAndModify: false,
   });
 
   // return exit tasks
