@@ -1,4 +1,5 @@
 interface TransporterWrapper {
+  transporter: any;
   connect(
     port: number,
     host: string,
@@ -26,4 +27,7 @@ export async function connectToMailServer(
       from: senderAddress,
     }
   );
+
+  // return exit tasks
+  return () => transporterWrapper.transporter.close();
 }
