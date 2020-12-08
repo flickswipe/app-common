@@ -7,12 +7,14 @@ export async function connectToDatabaseServer(
   pass: string,
   dbName: string
 ): Promise<() => unknown> {
+  console.info("Connecting to database server");
+
   // handle connection events
   mongoose.connection.on("connected", () => {
-    console.info(`Connected to MongoDb`);
+    console.info(`Connected to database server`);
   });
   mongoose.connection.on("disconnected", () => {
-    console.info(`MongoDb connection lost`);
+    console.info(`Database server connection lost`);
   });
 
   // connect to server

@@ -17,6 +17,8 @@ export async function connectToMailServer(
   pass: string,
   senderAddress: string
 ): Promise<any> {
+  console.info("Connecting to mail server");
+
   await transporterWrapper.connect(
     port,
     host,
@@ -27,6 +29,8 @@ export async function connectToMailServer(
       from: senderAddress,
     }
   );
+
+  console.info("Connected to mail server");
 
   // return exit tasks
   return () => {

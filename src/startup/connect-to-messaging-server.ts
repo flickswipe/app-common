@@ -10,19 +10,24 @@ export async function connectToMessagingServer(
   url: string,
   Listeners: any[] = []
 ): Promise<() => void> {
+  console.info("Connecting to messaging server");
+
   // connect to server
   await natsWrapper.connect(clusterId, clientId, url);
 
   // handle disconnect
   natsWrapper.client.on("disconnect", () => {
-    console.error(`NATS connection lost`);
+    console.error(`Messaging server connection lost`);
 
-    console.info("Exiting process...");
+    console.info("Exiting process");
     process.exitCode = 1;
   });
 
   // attach listeners
-  Listeners.forEach((Listener) => new Listener(natsWrapper.client).listen());
+  Listeners.forEach((Listener) => {
+    console.info(`Listening to ${Listener.name}`);
+    new Listener(natsWrapper.client).listen();
+  });
 
   // return exit tasks
   return () => {
