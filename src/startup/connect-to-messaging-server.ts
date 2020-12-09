@@ -24,7 +24,7 @@ export async function connectToMessagingServer(
   });
 
   // attach listeners
-  Listeners.forEach((Listener) => {
+  Listeners.filter((func) => typeof func === "function").forEach((Listener) => {
     console.info(
       `Listening to ${Listener.name.replace(/Listener$/, " events")}`
     );
