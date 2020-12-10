@@ -44,6 +44,7 @@ export * from "./startup/attach-exit-tasks";
 export * from "./startup/connect-to-database-server";
 export * from "./startup/connect-to-mail-server";
 export * from "./startup/connect-to-messaging-server";
+export * from "./startup/start-http-server";
 
 export * from "./utility/schedule-once";
 export * from "./utility/schedule-repeat";
