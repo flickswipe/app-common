@@ -1,6 +1,10 @@
+let exiting = false;
+
 const timerIds: NodeJS.Timer[] = [];
 
 const clearTimers = () => {
+  exiting = true;
+
   timerIds.forEach((timerId) => {
     clearTimeout(timerId);
   });
@@ -15,6 +19,8 @@ export function scheduleOnce(
   func: (...args: any[]) => any,
   delay: number
 ): void {
-  const timerId = setTimeout(func, delay);
-  timerIds.push(timerId);
+  if (!exiting) {
+    const timerId = setTimeout(func, delay);
+    timerIds.push(timerId);
+  }
 }
