@@ -33,7 +33,7 @@ export async function connectToMessagingServer(
 
   // return exit tasks
   return () => {
-    console.info("Closing connecting to messaging server");
+    console.info("Closing connection to messaging server");
     natsWrapper.client.close();
   };
 }

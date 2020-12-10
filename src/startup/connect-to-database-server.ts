@@ -30,7 +30,7 @@ export async function connectToDatabaseServer(
 
   // return exit tasks
   return () => {
-    console.info("Closing connecting to database server");
+    console.info("Closing connection to database server");
     mongoose.connection.close();
   };
 }
