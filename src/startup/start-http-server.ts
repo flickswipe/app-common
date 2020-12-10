@@ -5,23 +5,28 @@ export async function startHttpServer(
   port: number
 ): Promise<() => unknown> {
   console.info("Starting HTTP server");
+  return new Promise((resolve, reject) => {
+    // start server
+    const httpServer = app.listen(port, () => {
+      console.info(`Listening on port ${port}`);
+    });
 
-  // start server
-  const httpServer = app.listen(port, () => {
-    console.info(`Listening on port ${port}`);
-  });
+    // handle exit task
+    const exitTask = () => {
+      console.info("Stopping HTTP server");
+      httpServer.close();
+    };
 
-  // handle connection events
-  httpServer.on("connection", () => {
-    console.info(`Started HTTP server`);
+    // handle connection events
+    httpServer.on("error", (err) => {
+      reject(err);
+    });
+    httpServer.on("connection", () => {
+      console.info(`Started HTTP server`);
+      resolve(exitTask);
+    });
+    httpServer.on("close", () => {
+      console.info(`HTTP server connection closed`);
+    });
   });
-  httpServer.on("close", () => {
-    console.info(`HTTP server connection closed`);
-  });
-
-  // return exit tasks
-  return () => {
-    console.info("Stopping HTTP server");
-    httpServer.close();
-  };
 }
