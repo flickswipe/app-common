@@ -8,22 +8,20 @@ export async function startHttpServer(
   return new Promise((resolve, reject) => {
     // start server
     const httpServer = app.listen(port, () => {
-      console.info(`Listening on port ${port}`);
-    });
+      console.info(`HTTP server listening on port ${port}`);
 
-    // handle exit task
-    const exitTask = () => {
-      console.info("Stopping HTTP server");
-      httpServer.close();
-    };
+      // return exit task
+      const exitTask = () => {
+        console.info("Stopping HTTP server");
+        httpServer.close();
+      };
+
+      resolve(exitTask);
+    });
 
     // handle connection events
     httpServer.on("error", (err) => {
       reject(err);
-    });
-    httpServer.on("connection", () => {
-      console.info(`Started HTTP server`);
-      resolve(exitTask);
     });
     httpServer.on("close", () => {
       console.info(`HTTP server connection closed`);
