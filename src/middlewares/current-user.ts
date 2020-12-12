@@ -20,7 +20,6 @@ export const currentUser = (
   next: NextFunction
 ): void => {
   if (!req.session?.jwt) {
-    console.log(`no jwt detected`);
     return next();
   }
 
@@ -31,7 +30,6 @@ export const currentUser = (
     ) as UserPayload;
 
     req.currentUser = payload;
-    console.log(`jwt detected for`, payload);
   } catch (err) {
     delete req.currentUser;
     console.error("Failed to extract current user from JWT");
