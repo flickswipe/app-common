@@ -80,10 +80,23 @@ export function settingsDiffer(
       );
 
     case SettingType.ReleaseDate:
-      return limitsAreDifferent(
-        a as ReleaseDateSetting["value"],
-        b as ReleaseDateSetting["value"]
-      );
+      a = a as ReleaseDateSetting["value"];
+      b = b as ReleaseDateSetting["value"];
+
+      if (a.min instanceof Date) {
+        a.min = a.min.getTime();
+      }
+      if (a.max instanceof Date) {
+        a.max = a.max.getTime();
+      }
+      if (b.min instanceof Date) {
+        b.min = b.min.getTime();
+      }
+      if (b.max instanceof Date) {
+        b.max = b.max.getTime();
+      }
+
+      return limitsAreDifferent(a, b);
 
     case SettingType.Runtime:
       return limitsAreDifferent(
