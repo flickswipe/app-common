@@ -24,16 +24,16 @@ const limitsAreDifferent = (a: MinMax<any>, b: MinMax<any>) =>
  */
 const whitelistsAreDifferent = (a: whitelist, b: whitelist) => {
   if (a.length !== b.length) {
-    return false;
+    return true;
   }
 
   for (const [key, value] of Object.entries(a)) {
     if (b[key] !== value) {
-      return false;
+      return true;
     }
   }
 
-  return true;
+  return false;
 };
 
 /**
