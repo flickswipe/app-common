@@ -48,3 +48,4 @@ export * from "./startup/start-http-server";
 
 export * from "./utility/schedule-once";
 export * from "./utility/schedule-repeat";
+export * from "./utility/settings-differ";
