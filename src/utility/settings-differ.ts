@@ -48,6 +48,14 @@ export function settingsDiffer(
   a: AnySetting["value"],
   b: AnySetting["value"]
 ): boolean {
+  if (typeof a === "undefined" && typeof b === "undefined") {
+    return false;
+  }
+
+  if (typeof a === "undefined" && typeof b !== "undefined") {
+    return true;
+  }
+
   switch (settingType) {
     case SettingType.Country:
       return stringsAreDifferent(
