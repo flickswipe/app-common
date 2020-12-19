@@ -29,6 +29,7 @@ export * from "./events/notification-updated";
 export * from "./events/relationship-updated";
 export * from "./events/subjects";
 export * from "./events/user-created";
+export * from "./events/user-referred";
 export * from "./events/user-updated-email";
 export * from "./events/user-updated-setting";
 

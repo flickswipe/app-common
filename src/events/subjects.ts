@@ -2,6 +2,7 @@ export enum Subjects {
   // auth
   UserCreated = "user:created",
   UserUpdatedEmail = "user:updated:email",
+  UserReferred = "user:referred",
   EmailTokenCreated = "email-token:created",
 
   // ingest
