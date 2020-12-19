@@ -4,4 +4,7 @@ export enum EmailTokenType {
 
   // Token validates an email change attempt
   AddEmail = "add-email",
+
+  // Token validates an invite
+  Invite = "invite",
 }
